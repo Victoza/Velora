@@ -1,19 +1,50 @@
-# React + Vite
+## Velora 
+Velora is a responsive e-commerce web application built with React.js and Tailwind CSS. The project uses the Fake Store API to fetch and display product data dynamically.
+The application includes product browsing, category filtering, responsive product cards, a mobile navigation menu, and interactive shopping actions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+-	React.js
+-	Tailwind CSS
+-	JavaScript (ES6+)
+-	Fake Store API
+-	React Icons
+-	Vite
 
-## React Compiler
+## Features
+-	Fetches products dynamically from the Fake Store API
+-	Displays products in reusable product cards
+-	Category filtering
+-	Show More functionality for products
+-	Responsive design for desktop, tablet, and mobile devices
+-	Mobile navigation menu
+-	Interactive Add to Cart and Wishlist buttons
+-	Loading spinner while products are being fetched
+-	Responsive and accessible UI
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Performance Improvements
+Several improvements were implemented to make the application faster and more efficient:
+-	Loading state: A loading spinner is displayed while products are being fetched, giving users feedback instead of showing an empty page.
+-	Controlled product rendering: Initially displaying a limited number of products reduces the amount of content rendered at once. Users can select Show More when they want to view additional products.
+-	Reusable components: Components such as ProductCard, Button, and Spinner were created to avoid unnecessary repetition and make the application easier to maintain.
+-	Responsive layouts: Tailwind's responsive utilities were used to create layouts that adapt to different screen sizes without requiring separate desktop and mobile versions.
+-	Efficient state management: React state and effects were used to manage API data, loading states, filtering, and UI interactions.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Accessibility Considerations
+Accessibility was considered throughout the development of Velora.
+-	Semantic HTML elements were used where appropriate.
+-	Buttons were used for interactive actions instead of clickable non-button elements.
+-	Interactive elements have clear labels and recognizable icons.
+-	Responsive layouts ensure that content remains usable on smaller screens.
+-	Sufficient spacing and readable typography were used to improve usability.
+-	The page structure was improved using appropriate heading levels and a main landmark.
+-	Lighthouse was used to identify accessibility issues and guide improvements.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Challenges Encountered
+1. Category Filtering
+Implementing category filtering required understanding how to compare the selected category with each product's category and update the displayed products accordingly.
+2. Responsive Design
+Making the interface work well across different screen sizes was another challenge. Some layouts initially caused spacing and overflow issues on mobile devices, which required adjustments to Tailwind CSS classes.
+3. Consistent Product Cards
+The API products have different image sizes, titles, and descriptions. Creating product cards that remained visually consistent required careful use of fixed dimensions, spacing, image containers, and text styling.
