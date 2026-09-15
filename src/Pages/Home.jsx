@@ -4,7 +4,6 @@ import Hero from '../Sections/Hero'
 import Category from '../Sections/Category'
 import ProductList from '../Sections/ProductList'
 import Footer from '../Components/Footer'
-import Banner1 from '../Sections/Banner1'
 
 
 const Home = () => {
@@ -12,7 +11,6 @@ const Home = () => {
     <div>
         <Header/>
         <Hero/>
-        {/* <Banner1/> */}
         <Category/>
         <ProductList/>
         <Footer/>

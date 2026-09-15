@@ -11,7 +11,7 @@ const Header = () => {
     <section className='bg-white shadow-md py-6'>
         <div className='px-4 md:px-8 lg:px-8 flex justify-between items-center '>
             <div className='flex justify-between items-center gap-4'>
-                <h3 className='text-xl md:text-2xl lg:text-3xl font-bold'>Velora</h3>
+                <h2 className='text-xl md:text-2xl lg:text-3xl font-bold'>Velora</h2>
                 <BsShopWindow size={36} className=''/>
             </div>
                 <nav className='hidden lg:block'>

@@ -33,17 +33,18 @@ const ProductList = () => {
     <section className='py-12'>
         <div className='px-4 md:px-8 lg:px-12 space-y-12'>
             <div className='overflow-x-auto space-y-4'>
-               <div className='space-x-2 mb-4 min-w-max space-y-2'>
+               <div className='flex justify-center space-x-2 mb-4 min-w-max space-y-2'>
                 <button onClick={() => setSelectedCategory('all')}
-                className={`px-4 py-2 rounded-full ${selectedCategory === 'all'? 'bg-green-700 text-white': 'bg-gray-200 text-gray-700'}`}>
+                className={`px-4 py-2 rounded-full ${selectedCategory === 'all'? 'bg-gray-800 text-white': 'bg-gray-200 text-gray-700'}`}>
                         All
                 </button>
-                    {categories.map((category,index)=>(
-                        <button 
-                            key={index} onClick={()=>selectedCategory(category)}
-                            className={`px-4 py-2 rounded-full ${selectedCategory === category ? 'bg-green-700 text-white' : 'bg-gray-200 text-gray-700'}`}>
+
+                {categories.map((category,index)=>(
+                    <button 
+                        key={index} onClick={()=>setSelectedCategory(category)}
+                        className={`px-4 py-2 rounded-full ${selectedCategory === category ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-700'}`}>
                         {category}
-                        </button>
+                    </button>
                     ))}
                 </div> 
             </div>
